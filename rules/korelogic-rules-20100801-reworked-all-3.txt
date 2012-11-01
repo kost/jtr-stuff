@@ -233,7 +233,7 @@ A0"[Ss][uU][nN][dD][aA4@][yY]"
 -[:c] <* Az"\p[fF]ebruary"
 -[:c] Az"\p[fF]ebruary[0-9]" <+
 -[:c] Az"\p[fF]ebruary[0-9][0-9]" <+
--[:c] Az"\p[mM]arch"
+-[:c] <* Az"\p[mM]arch"
 -[:c] Az"\p[mM]arch[0-9]" <+
 -[:c] Az"\p[mM]arch[0-9][0-9]" <+
 -[:c] <* Az"\p[aA]pril"
@@ -640,7 +640,7 @@ A0"[hH][eE][lL][lL][oO0]"
 -[:c] <* Az"\p[fF]ebruary"
 -[:c] Az"\p[fF]ebruary[0-9]" <+
 -[:c] Az"\p[fF]ebruary[0-9][0-9]" <+
--[:c] Az"\p[mM]arch"
+-[:c] <* Az"\p[mM]arch"
 -[:c] Az"\p[mM]arch[0-9]" <+
 -[:c] Az"\p[mM]arch[0-9][0-9]" <+
 -[:c] <* Az"\p[aA]pril"
