@@ -135,3 +135,138 @@ A0"[Nn][e3E][dD][jJ][e3E][lL][jJ][aA4@]"
 -[c:] <- \p[c:] Az".from.hr"
 -[c:] <- \p[c:] Az".iz.hr"
 
+####################################################################
+Now, single rule to cover all above rules
+####################################################################
+
+[List.Rules:KostHrvRules]
+
+# Use this rule with 2EVERYTHING.dic or 3EVERYTHING.dic
+;[List.Rules:KostHrvRulesPrependSeason]
+A0"[Ll1][jJ][eE3][tT+][o0O]"
+A0"[Zz][iI|1][mM][a4A]"
+A0"[Jj][e3E][s$S][e3E][nN]"
+A0"[Pp][rR][o0O][lL][jJ][e3E][cC][e3E]"
+
+# Use this rule with 2EVERYTHING.dic or 3EVERYTHING.dic
+;[List.Rules:KostHrvRulesAppendSeason]
+<* Az"[Ll1][jJ][eE3][tT+][o0O]"
+<* Az"[Zz][iI|1][mM][a4A]"
+<* Az"[Jj][e3E][s$S][e3E][nN]"
+<* Az"[Pp][rR][o0O][lL][jJ][e3E][cC][e3E]"
+
+;[List.Rules:KostHrvRulesPrependHello]
+A0"[Zz][dD][rR][a4A][vV][o0O]"
+
+;[List.Rules:KostHrvRulesMonthsFullPreface]
+-[:c] A0"\p[sS]ijecanj"
+-[:c] A0"\p[vV]eljaca"
+-[:c] A0"\p[oO]zujak"
+-[:c] A0"\p[tT]ravanj"
+-[:c] A0"\p[sS]vibanj"
+-[:c] A0"\p[lL]ipanj"
+-[:c] A0"\p[sS]rpanj"
+-[:c] A0"\p[kK]olovoz"
+-[:c] A0"\p[rR]ujan"
+-[:c] A0"\p[lL]istopad"
+-[:c] A0"\p[sS]tudeni"
+-[:c] A0"\p[pP]rosinac"
+
+;[List.Rules:KostHrvRulesAddShortMonthsEverywhere]
+<* >\r[00123456789] A\p[z0-9]"[sS][iJ][eE]"
+<* >\r[00123456789] A\p[z0-9]"[vV][eE][lL]"
+<* >\r[00123456789] A\p[z0-9]"[oO][zZ][uU]"
+<* >\r[00123456789] A\p[z0-9]"[tT][rR][aA]"
+<* >\r[00123456789] A\p[z0-9]"[sS][vV][iI]"
+<* >\r[00123456789] A\p[z0-9]"[lL][iI][pP]"
+<* >\r[00123456789] A\p[z0-9]"[sS][rR][pP]"
+<* >\r[00123456789] A\p[z0-9]"[kK][oO][lL]"
+<* >\r[00123456789] A\p[z0-9]"[rR][uU][jJ]"
+<* >\r[00123456789] A\p[z0-9]"[lL][iI][sS]"
+<* >\r[00123456789] A\p[z0-9]"[sS][tT][uU]"
+<* >\r[00123456789] A\p[z0-9]"[pP][rR][oO]"
+
+
+;[List.Rules:KostHrvRulesPrepend4LetterMonths]
+## Preface each dictionary with Janu janu Febr febr
+-[:c] A0"\p[sS]ije"
+-[:c] A0"\p[vV]elj"
+-[:c] A0"\p[oO]zuj"
+-[:c] A0"\p[tT]rav"
+-[:c] A0"\p[sS]vib"
+-[:c] A0"\p[lL]ipa"
+-[:c] A0"\p[sS]rpa"
+-[:c] A0"\p[kK]olo"
+-[:c] A0"\p[rR]uja"
+-[:c] A0"\p[lL]ist"
+-[:c] A0"\p[sS]tud"
+-[:c] A0"\p[pP]ros"
+
+;[List.Rules:KostHrvRulesPrependDaysWeek]
+A0"[Pp][oO0][nN][e3E][dD][jJ][e3E][lL][jJ][aA4@][kK]"
+A0"[Uu][tT+][o0O][rR][aA4@][kK]"
+A0"[S$s][rR][i|1I][jJ][eE3][dD][aA4@]"
+A0"[Cc][e3E][t+T][vV][rR][t+T][aA4@][kK]"
+A0"[Pp][e3E][t+T][aA4@][kK]"
+A0"[S$s][uU][bB][o0O][tT+][aA4@]"
+A0"[Nn][e3E][dD][jJ][e3E][lL][jJ][aA4@]"
+
+;[List.Rules:KostHrvRulesAppendMonthDay]
+-[:c] <* Az"\p[sS]ijecanj"
+-[:c] Az"\p[sS]ijecanj[0-9]" <+
+-[:c] Az"\p[sS]ijecanj[0-9][0-9]" <+
+-[:c] <* Az"\p[vV]eljaca"
+-[:c] Az"\p[vV]eljaca[0-9]" <+
+-[:c] Az"\p[vV]eljaca[0-9][0-9]" <+
+-[:c] <* Az"\p[oO]zujak"
+-[:c] Az"\p[oO]zujak[0-9]" <+
+-[:c] Az"\p[oO]zujak[0-9][0-9]" <+
+-[:c] <* Az"\p[tT]ravanj"
+-[:c] Az"\p[tT]ravanj[0-9]" <+
+-[:c] Az"\p[tT]ravanj[0-9][0-9]" <+
+-[:c] <* Az"\p[sS]vibanj"
+-[:c] Az"\p[sS]vibanj[0-9]" <+
+-[:c] Az"\p[sS]vibanj[0-9][0-9]" <+
+-[:c] <* Az"\p[lL]ipanj"
+-[:c] Az"\p[lL]ipanj[0-9]" <+
+# There was a typo in Kore's original revision of this rule
+-[:c] Az"\p[lL]ipanj[0-9][0-9]" <+
+-[:c] <* Az"\p[sS]rpanj"
+-[:c] Az"\p[sS]rpanj[0-9]" <+
+-[:c] Az"\p[sS]rpanj[0-9][0-9]" <+
+-[:c] <* Az"\p[kK]olovoz"
+-[:c] Az"\p[kK]olovoz[0-9]" <+
+-[:c] Az"\p[kK]olovoz[0-9][0-9]" <+
+-[:c] <* Az"\p[rR]ujan"
+-[:c] Az"\p[rR]ujan[0-9]" <+
+# There was a typo in Kore's original revision of this rule
+-[:c] Az"\p[rR]ujan[0-9][0-9]" <+
+-[:c] <* Az"\p[lL]istopad"
+-[:c] Az"\p[lL]istopad[0-9]" <+
+-[:c] Az"\p[lL]istopad[0-9][0-9]" <+
+-[:c] <* Az"\p[sS]tudeni"
+-[:c] Az"\p[sS]tudeni[0-9]" <+
+-[:c] Az"\p[sS]tudeni[0-9][0-9]" <+
+-[:c] <* Az"\p[pP]rosinac"
+-[:c] Az"\p[pP]rosinac[0-9]" <+
+-[:c] Az"\p[pP]rosinac[0-9][0-9]" <+
+
+;[List.Rules:KostHrvRulesAppendMonthCurrentYear]
+-[:c] <* Az"\p[sS]ij201[0-9]"
+-[:c] <* Az"\p[vV]el201[0-9]"
+-[:c] <* Az"\p[oO]zu201[0-9]"
+-[:c] <* Az"\p[tT]ra201[0-9]"
+-[:c] <* Az"\p[sS]vi201[0-9]"
+-[:c] <* Az"\p[lL]ip201[0-9]"
+-[:c] <* Az"\p[sS]rp201[0-9]"
+-[:c] <* Az"\p[kK]ol201[0-9]"
+-[:c] <* Az"\p[rR]uj201[0-9]"
+-[:c] <* Az"\p[lL]is201[0-9]"
+-[:c] <* Az"\p[sS]tu201[0-9]"
+-[:c] <* Az"\p[pP]ro201[0-9]"
+
+;[List.Rules:KostHrvRulesAddDotCom]
+-[c:] <- \p[c:] Az".hr"
+-[c:] <- \p[c:] Az".com.hr"
+-[c:] <- \p[c:] Az".from.hr"
+-[c:] <- \p[c:] Az".iz.hr"
